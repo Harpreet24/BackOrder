@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Back Order Prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Back Order Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="national_inv" placeholder="Current inventory level  eg. 1.0"><br>
+                <input class="form-input" type="text" name="lead_time" placeholder="Transit time for product  eg. 2.0"><br>
+                <input class="form-input" type="text" name="in_transit_qty" placeholder="Amount of product in transit from source eg. 20.2"><br>
+                <input class="form-input" type="text" name="min_bank" placeholder="Minimum recommend amount to stock eg. 1.2"><br>
+                <input class="form-input" type="text" name="local_bo_qty" placeholder="Amount of stock  eg. 5.2"><br>
+                
+                 <input type="submit" class="my-cta-button" value="Predict">
+        	
+                </form>
+    	</div>
+
+       
+           <p class='footer-description'>Made with ❤️ by Harpreet Singh.</p>
+       </div>
+
+    </body>
+</html>
