@@ -3,7 +3,7 @@ gunicorn==20.0.4
 matplotlib==3.2.0
 notebook==6.0.3
 numba==0.48.0
-numpy==1.18.1
+numpy==1.22.0
 pandas==1.0.1
 pandocfilters==1.4.2
 pickleshare==0.7.5
